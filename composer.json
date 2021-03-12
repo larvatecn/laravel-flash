@@ -1,0 +1,24 @@
+{
+    "name": "larva/laravel-flash",
+    "description": "This is a Laravel flash messages expansion.",
+    "keywords": [
+        "Larva",
+        "laravel",
+        "flash"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3 || ^8.0",
+        "illuminate/session": "^6.0 || ^7.0 || ^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Larva\\Flash\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "prefer-stable": true
+}
