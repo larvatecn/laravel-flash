@@ -22,7 +22,7 @@ class FlashNotify
     /**
      * @var Session
      */
-    protected Session $session;
+    protected $session;
 
     /**
      * Constructor.
@@ -38,7 +38,7 @@ class FlashNotify
      * @param string $message
      * @return $this
      */
-    public function success(string $message)
+    public function success(string $message): FlashNotify
     {
         return $this->message($message, 'success');
     }
@@ -47,7 +47,7 @@ class FlashNotify
      * @param string $message
      * @return $this
      */
-    public function error(string $message)
+    public function error(string $message): FlashNotify
     {
         return $this->message($message, 'error');
     }
@@ -57,7 +57,7 @@ class FlashNotify
      * @param string $message
      * @return $this
      */
-    public function warning(string $message)
+    public function warning(string $message): FlashNotify
     {
         return $this->message($message, 'warning');
     }
@@ -67,7 +67,7 @@ class FlashNotify
      * @param string $message
      * @return $this
      */
-    public function info(string $message)
+    public function info(string $message): FlashNotify
     {
         return $this->message($message, 'info');
     }
@@ -78,7 +78,7 @@ class FlashNotify
      * @param string $type
      * @return $this
      */
-    public function message(string $message, string $type)
+    public function message(string $message, string $type): FlashNotify
     {
         $this->session->flash('flash.message', $message);
         $this->session->flash('flash.type', $type);
